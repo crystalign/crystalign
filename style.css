@@ -4,10 +4,16 @@ padding:0;
 box-sizing:border-box;
 font-family:'Segoe UI',sans-serif;
 }
-
+:root{
+    --primary:#2563EB;
+    --accent:#06B6D4;
+    --background:#F8FAFC;
+    --text:#0F172A;
+    --gray:#64748B;
+}
 body{
-background:linear-gradient(135deg,#eef8ff,#ffffff);
-color:#222;
+background:var(--background);
+color:var(--text);
 }
 
 header{
