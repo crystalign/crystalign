@@ -1,166 +1,747 @@
+/* ===================================================
+   CRYSTALIGN WEBSITE
+   Author : Crystalign
+=================================================== */
+
+/* Google Font */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-:root{
-    --primary:#2563EB;
-    --accent:#06B6D4;
-    --background:#F8FAFC;
-    --text:#0F172A;
-    --gray:#64748B;
+
+html{
+    scroll-behavior:smooth;
 }
+
 body{
-background:var(--background);
-color:var(--text);
+
+    font-family:'Poppins',sans-serif;
+    background:#ffffff;
+    color:#1d1d1d;
+    overflow-x:hidden;
+    line-height:1.7;
+
 }
 
-header{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(255,255,255,.85);
-backdrop-filter:blur(10px);
-box-shadow:0 2px 15px rgba(0,0,0,.08);
-z-index:1000;
+a{
+    text-decoration:none;
 }
 
-.logo{
-font-size:32px;
-font-weight:700;
-color:var(--primary);
+img{
+    max-width:100%;
+    display:block;
 }
 
-nav a{
-margin-left:32px;
-text-decoration:none;
-color:var(--text);
-font-weight:600;
-font-size:16px;
-transition:0.3s;
-position:relative;
+section{
+    padding:100px 0;
 }
 
-nav a:hover{
-color:var(--primary);
+.container{
+    width:90%;
+    max-width:1320px;
+    margin:auto;
 }
 
-/* ---------- HERO SECTION ---------- */
+:root{
+
+    --primary:#0B5ED7;
+    --secondary:#0A1F44;
+    --light:#F7FAFD;
+    --text:#555555;
+    --white:#ffffff;
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.btn{
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.card{
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.10);
+
+}
+/*==================================================
+                TOP BAR
+==================================================*/
+
+.top-bar{
+
+    background:#0A1F44;
+    color:#ffffff;
+    font-size:14px;
+    padding:10px 0;
+
+}
+
+.top-bar .container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.top-left{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+}
+
+.top-left span{
+
+    color:#ffffff;
+
+}
+
+.top-right{
+
+    display:flex;
+    gap:18px;
+
+}
+
+.top-right a{
+
+    color:#ffffff;
+    transition:.3s;
+
+}
+
+.top-right a:hover{
+
+    color:#7BB8FF;
+
+}
+
+/*==================================================
+                NAVBAR
+==================================================*/
+
+.navbar{
+
+    background:#ffffff !important;
+    padding:18px 0;
+    box-shadow:0 5px 25px rgba(0,0,0,.05);
+
+}
+
+.navbar-brand{
+
+    font-size:34px;
+    font-weight:800;
+    letter-spacing:.5px;
+
+}
+
+.nav-link{
+
+    color:#222 !important;
+    font-weight:500;
+    margin:0 12px;
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#0B5ED7 !important;
+
+}
+
+.nav-link.active{
+
+    color:#0B5ED7 !important;
+
+}
+
+.navbar .btn{
+
+    padding:12px 28px;
+    border-radius:50px;
+    font-weight:600;
+
+}
+
+.navbar .btn:hover{
+
+    transform:translateY(-2px);
+
+}
+/*==================================================
+                    HERO SECTION
+==================================================*/
 
 .hero{
 
-    max-width:1400px;
-    margin:auto;
-
+    min-height:90vh;
     display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,#F8FBFF 0%,#EDF5FF 100%);
+    overflow:hidden;
 
+}
+
+.hero .container{
+
+    padding-top:40px;
+    padding-bottom:40px;
+
+}
+
+.hero .row{
+
+    min-height:80vh;
     align-items:center;
 
-    justify-content:space-between;
+}
 
-    gap:60px;
+.hero .badge{
 
-    min-height:90vh;
-
-    padding:60px;
+    background:#E8F2FF !important;
+    color:#0B5ED7 !important;
+    font-size:14px;
+    font-weight:600;
+    border-radius:50px;
+    padding:12px 20px !important;
 
 }
 
-.hero-left{
+.hero h1{
 
-    flex:1;
-
-}
-
-.hero-right{
-
-    flex:1;
-
-    display:flex;
-
-    justify-content:center;
+    font-size:64px;
+    font-weight:800;
+    color:#0A1F44;
+    line-height:1.15;
+    margin-top:20px;
 
 }
 
-.hero-right img{
+.hero h1 span{
+
+    color:#0B5ED7;
+
+}
+
+.hero p{
+
+    font-size:19px;
+    color:#666666;
+    margin-top:25px;
+    max-width:560px;
+
+}
+
+.hero .btn{
+
+    padding:16px 38px;
+    font-size:17px;
+    border-radius:50px;
+    font-weight:600;
+    margin-top:15px;
+
+}
+
+.hero img{
 
     width:100%;
-
-    max-width:800px;
-
-    height:auto;
+    max-width:650px;
+    margin:auto;
+    animation:floatImage 5s ease-in-out infinite;
 
 }
 
-.hero-left h1{
+@keyframes floatImage{
 
-    font-size:70px;
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+/*==================================================
+        WHY CHOOSE CRYSTALIGN
+==================================================*/
+
+.bg-light{
+    background:#f8fbff !important;
+}
+
+section h2{
+    color:#0A1F44;
+    font-weight:800;
+}
+
+section p{
+    color:#666;
+}
+
+.card{
+    border:none !important;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.35s ease;
+    background:#ffffff;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 45px rgba(11,94,215,.15);
+}
+
+.card i{
+    color:#0B5ED7;
+}
+
+.card h4{
+    margin-top:10px;
+    margin-bottom:15px;
+    font-weight:700;
+    color:#0A1F44;
+}
+
+.card p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+/*==================================================
+            HOW IT WORKS
+==================================================*/
+
+.rounded-circle{
+    transition:.35s;
+}
+
+.rounded-circle:hover{
+    transform:scale(1.1);
+}
+
+.text-center h4{
+    color:#0A1F44;
+    margin-top:20px;
+}
+
+.text-center p{
+    font-size:15px;
+}
+
+/*==================================================
+            TECHNOLOGY SECTION
+==================================================*/
+
+.bg-light img{
+
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+}
+
+.display-5{
 
     font-weight:800;
 
-    line-height:1.1;
+}
 
-    color:#081B4B;
+.text-primary{
+
+    color:#0B5ED7 !important;
 
 }
 
-.hero-left span{
+.col-lg-6 h4{
 
-    color:#2563EB;
+    font-size:34px;
+    font-weight:700;
 
 }
 
-.hero-left p{
-
-    font-size:22px;
-
-    color:#555;
+.col-lg-6 p{
 
     line-height:1.8;
 
-    margin-top:25px;
+}
+/*==================================================
+        PARTNER WITH CRYSTALIGN
+==================================================*/
+
+.col-lg-6 img{
+
+    transition:.4s ease;
 
 }
 
-.hero-buttons{
+.col-lg-6 img:hover{
 
-    margin-top:40px;
-
-    display:flex;
-
-    gap:20px;
+    transform:scale(1.03);
 
 }
 
-.hero-buttons button{
+.fa-circle-check{
 
-    background:#2563EB;
+    font-size:24px;
+    margin-top:3px;
 
-    color:white;
+}
+
+.btn-primary{
+
+    background:#0B5ED7;
+    border:none;
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    background:#0849a5;
+    transform:translateY(-3px);
+
+}
+
+/*==================================================
+                TESTIMONIALS
+==================================================*/
+
+.card img{
+
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #0B5ED7;
+
+}
+
+.text-warning{
+
+    color:#FFC107 !important;
+}
+
+.card hr{
+
+    margin:20px 0;
+
+}
+
+.card h6{
+
+    font-weight:700;
+    color:#0A1F44;
+
+}
+
+.card small{
+
+    color:#777;
+
+}
+
+/*==================================================
+                    FAQ
+==================================================*/
+
+.accordion-item{
 
     border:none;
-
-    padding:18px 40px;
-
-    border-radius:50px;
-
-    font-size:18px;
-
-    cursor:pointer;
+    margin-bottom:18px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
 
 }
 
-.secondary-btn{
+.accordion-button{
 
-    background:white;
+    font-weight:600;
+    font-size:17px;
+    padding:22px;
+    background:#ffffff;
 
-    color:#2563EB;
+}
 
-    border:2px solid #2563EB;
+.accordion-button:not(.collapsed){
+
+    background:#0B5ED7;
+    color:#ffffff;
+
+}
+
+.accordion-button:focus{
+
+    box-shadow:none;
+
+}
+
+.accordion-body{
+
+    padding:22px;
+    line-height:1.8;
+    color:#666;
+
+}
+/*==================================================
+            CONTACT SECTION
+==================================================*/
+
+form .form-control{
+
+    border-radius:15px;
+    padding:15px 20px;
+    border:1px solid #dfe7f3;
+    box-shadow:none;
+
+}
+
+form .form-control:focus{
+
+    border-color:#0B5ED7;
+    box-shadow:0 0 0 0.2rem rgba(11,94,215,.15);
+
+}
+
+textarea{
+
+    resize:none;
+
+}
+
+.bg-primary{
+
+    background:#0A1F44 !important;
+
+}
+
+.bg-primary h2,
+.bg-primary h5,
+.bg-primary p{
+
+    color:#ffffff;
+
+}
+
+/*==================================================
+                FOOTER
+==================================================*/
+
+footer{
+
+    background:#08152F !important;
+
+}
+
+footer h2{
+
+    font-weight:800;
+    color:#ffffff;
+
+}
+
+footer h5{
+
+    color:#ffffff;
+    margin-bottom:20px;
+
+}
+
+footer ul{
+
+    padding:0;
+
+}
+
+footer ul li{
+
+    list-style:none;
+    margin-bottom:12px;
+
+}
+
+footer ul li a{
+
+    color:#cfd8e3 !important;
+    transition:.3s;
+
+}
+
+footer ul li a:hover{
+
+    color:#4EA5FF !important;
+    padding-left:8px;
+
+}
+
+footer p{
+
+    color:#cfd8e3;
+
+}
+
+footer i{
+
+    transition:.3s;
+
+}
+
+footer i:hover{
+
+    color:#4EA5FF;
+    transform:translateY(-3px);
+
+}
+
+footer hr{
+
+    border-color:rgba(255,255,255,.1);
+
+}
+
+/*==================================================
+            RESPONSIVE DESIGN
+==================================================*/
+
+@media(max-width:991px){
+
+    .hero{
+
+        text-align:center;
+        min-height:auto;
+        padding:80px 0;
+
+    }
+
+    .hero h1{
+
+        font-size:44px;
+
+    }
+
+    .hero p{
+
+        margin:auto;
+        margin-top:25px;
+
+    }
+
+    .hero img{
+
+        margin-top:50px;
+        max-width:420px;
+
+    }
+
+    .top-bar{
+
+        display:none;
+
+    }
+
+    .navbar{
+
+        padding:15px 0;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+
+        font-size:34px;
+
+    }
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+    .display-5{
+
+        font-size:32px;
+
+    }
+
+    .navbar-brand{
+
+        font-size:28px;
+
+    }
+
+}
+
+/*==================================================
+            SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f1f1f1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0B5ED7;
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#084298;
+
+}
+
+/*==================================================
+            SELECTION
+==================================================*/
+
+::selection{
+
+    background:#0B5ED7;
+    color:#ffffff;
 
 }
